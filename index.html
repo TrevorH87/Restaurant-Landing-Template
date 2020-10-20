@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@800&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+</head>
+
+<body>
+    <div class="topnav" id="topnav">
+        <a class="active" href="#welcome-section">Home</a>
+        <a href="#location-button">Locations</a>
+        <a href="#bday-promo">Bob's Club</a>
+        <a href="#about">Order Here</a>
+        <a href="#footer-info">Contact Us</a>
+    </div>
+
+    <div class="welcome-section" id="welcome-section">
+        <div class="logo-text" id="logo-text">Bob's Burger Bistro</div>
+    </div>
+
+    <div class="wood-bar" id="wood-bar">
+        
+        <button id="location-button" onclick="getLocation()">Find your nearest location</button>
+        <script>
+        var x = document.getElementById("demo");
+        
+        function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+          } else { 
+            x.innerHTML = "Geolocation is not supported by this browser.";
+          }
+        }
+        
+        function showPosition(position) {
+          x.innerHTML = "Latitude: " + position.coords.latitude + 
+          "<br>Longitude: " + position.coords.longitude;
+        }
+        </script>
+    </div>
+
+    <div class="grid-container">
+      <div class="img-1"></div>
+      <div class="txt-1"><p><h1>Highlight your menu items</h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat congue turpis, eget lobortis libero sagittis quis. 
+        Proin sagittis urna vel odio tincidunt, quis ultrices orci lacinia. Nunc vel volutpat eros. Nullam iaculis sed nisi ut pulvinar. Ut urna lectus, porttitor sit amet orci quis, 
+        ornare fermentum turpis.</p></div>
+      <div class="txt-2"><p><h1>Highlight your current promos</h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat congue turpis, eget lobortis libero sagittis quis. 
+        Proin sagittis urna vel odio tincidunt, quis ultrices orci lacinia. Nunc vel volutpat eros. Nullam iaculis sed nisi ut pulvinar. Ut urna lectus, porttitor sit amet orci quis, 
+        ornare fermentum turpis.</p></div>
+      <div class="img-2"></div>
+      <div class="img-3"></div>
+      <div class="txt-3"><p><h1>Get sales from your website</h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat congue turpis, eget lobortis libero sagittis quis. 
+        Proin sagittis urna vel odio tincidunt, quis ultrices orci lacinia. Nunc vel volutpat eros. Nullam iaculis sed nisi ut pulvinar. Ut urna lectus, porttitor sit amet orci quis, 
+        ornare fermentum turpis.</p></div>
+    </div>
+    <div class="wood-bar" id="wood-bar"></div>
+    <div class="bar-img">
+        <div id="bday-promo"> Join Bob's club and get a free beer on your birthday!<br>
+            <form id="form" action="" method="get">
+                <input name="email" id="email" placeholder="Enter your email" type="email">
+                <input id="submit" type="submit">
+            </form>
+        </div>
+    </div>   
+    
+    <div class="wood-bar" id="wood-bar"></div>
+
+</body>
+
+<footer>
+  <img id="footer-info" class="social-media-button" alt="Facebook button" src="images/FB.svg">
+  <img class="social-media-button" alt="Instagram button" src="images/insta.svg">
+  <img class="social-media-button" alt="Twitter button" src="images/twitter.svg">
+  <img class="social-media-button" alt="YouTube button" src="images/youtube.svg">
+  <p>555 Main St, Anywhere, AZ, 88888 | (555) 555-5555</p>
+  <a href="https://www.trevorhoward.dev">&copy; Trevor Howard 2020</a>
+</footer>
+
+</html>
