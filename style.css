@@ -1,0 +1,192 @@
+html {
+  scroll-behavior: smooth;
+}
+body{
+    font-family: 'Alegreya SC', serif;
+    background-color: #080708;
+    
+}
+#welcome-section{
+  height: 100vh; 
+  width: auto;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.welcome-section{
+  background-image: url("images/burgers-on-the-grill.jpg"); /* The image used */
+  background-color: #080708; /* Used if the image is unavailable */
+  height: 100vh; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  
+}
+.logo-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  border: solid 3px white;
+  background-color: #aa0019;
+  padding: 20px;
+}
+
+.bar-img{
+  background-image: url("images/bar-area.jpg");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #080708;
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 1; /*Places the navbar above the other content to avoid hiding*/
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #aa0019;
+  color: white;
+}
+.wood-bar{
+  background-image: url(images/wood-bar.jpg);
+  background-color: #080708;
+  height: 150px;
+  color: #ddd;
+  text-align: center;
+  font-size: 2em;
+  position: relative;
+}
+#bday-promo{
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+  border: solid 3px white;
+  background-color:#aa0019;
+  padding: 10px;
+  max-width: 40%;
+  margin: auto;
+  
+}
+
+#submit{
+  background-color: #aa0019;
+  color: #ddd;
+  border: 2px solid white;
+}
+#submit:hover{
+  background-color: white;
+  color: #aa0019;
+}
+
+#location-button{
+  font-size: .6em;
+  border: solid 1px white;
+  background-color: #944617;
+  color: white;
+  padding: 15px;
+  font-family: 'Alegreya SC', serif;
+  margin: auto;
+  margin-top: 40px;  
+}
+
+footer{
+  background-color: #080708;
+  color: white;
+  text-align: center;
+  font-size: 1.2em;
+  
+}
+footer a {
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+ 
+}
+/* Change the color of links on hover */
+footer a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 600px 600px 600px;
+  gap: 0px 0px;
+  grid-template-areas:
+    "img-1 img-1 txt-1"
+    "txt-2 img-2 img-2"
+    "img-3 img-3 txt-3";
+  color: #ddd;  
+  
+}
+.img-1 { 
+  grid-area: img-1; 
+  object-fit: cover;
+  background-image: url(images/sweet-potato-fries.jpg);
+  background-size: cover;
+  background-position: center;
+  
+}
+.txt-1 { 
+  grid-area: txt-1;
+  margin: auto;
+  padding: 20px;
+}
+.txt-2 { 
+  grid-area: txt-2;
+  margin: auto;
+  padding: 20px;
+}
+.img-2 { 
+  grid-area: img-2; 
+  background-image: url(images/burger-w-fries.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.img-3 { 
+  grid-area: img-3; 
+  background-image: url(images/milkshake.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.txt-3 { 
+  grid-area: txt-3;
+  margin: auto;
+  padding: 20px;
+}
+.social-media-button{
+  height: 50px;
+  width: auto;
+
+}
